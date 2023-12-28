@@ -8,28 +8,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(/img/backgroud-blue.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
 }
 
-/* Contenedor que contiene la Imagen Mobile */
-
-.Container {
-  display: none; /* Oculta la imagen en dispositivos móviles */
-}
-
-/* Imagen Mobile */
-
-.Mobile {
-  display: none; /* Oculta la imagen en dispositivos móviles */
-}
-
 /* Estilos para calculadora */
 
 .Calculadora {
+  height: 80vh;
   width: 100%;
   max-width: 312px;
   background-color: #141414;
@@ -138,17 +127,34 @@ body {
 
 /* Modo responsivo */
 
-@media screen and (max-width: 400px) {
+@media (max-width: 480px) {
   body {
-    min-height: 400px;
-    padding: 30px;
-    margin: auto;
+    height: 100vh;
+    background: transparent;
+  }
+
+  #pantalla {
+    height: 180px;
   }
 
   .Calculadora {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 25px;
+    height: fit-content;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .Btn {
+    width: 115px;
+  }
+
+  .Btn-Cero {
+    width: 234px;
+  }
+
+  .Btn-Cero,
+  .Btn-Igual {
+    border-radius: 0;
   }
 
   .Btn-Divisor,
@@ -156,12 +162,19 @@ body {
   .Btn-Suma,
   .Btn-Resta,
   .Btn-Igual {
-    height: 70px;
-    width: 75px;
+    width: 100px;
+  }
+
+  .Btn-AC,
+  .Btn-Menor-Mayor,
+  .Btn-Porcentaje {
+    width: 115px;
   }
 
   .Btn-Clear,
   .Btn-Delete {
-    width: 115px;
+    height: 60px;
+    width: 180px;
+    transform: translateX(115px);
   }
 }
