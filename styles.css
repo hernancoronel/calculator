@@ -127,14 +127,14 @@ body {
 
 /* Modo responsivo */
 
-@media (max-width: 480px) {
+@media (max-width: 475px) {
   body {
     height: 100vh;
     background: transparent;
   }
 
   #pantalla {
-    height: 180px;
+    height: 200px;
   }
 
   .Calculadora {
@@ -146,11 +146,11 @@ body {
   }
 
   .Btn {
-    width: 115px;
+    width: 110px;
   }
 
   .Btn-Cero {
-    width: 234px;
+    width: 223px;
   }
 
   .Btn-Cero,
@@ -163,18 +163,20 @@ body {
   .Btn-Suma,
   .Btn-Resta,
   .Btn-Igual {
-    width: 115px;
+    width: 95px;
   }
 
   .Btn-AC,
   .Btn-Menor-Mayor,
   .Btn-Porcentaje {
-    width: 115px;
+    width: 110px;
   }
 
   .Btn-Clear,
   .Btn-Delete {
     height: 60px;
     width: 180px;
+    transform: translateX(40px);
   }
 }
+
